@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  pyspider:
+    build:
+      context: ./SpiderProject
+    container_name: pyspider
+    environment:
+      - TZ=Asia/Shanghai
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - E:/MyDockerImages/SpiderProject:/app
+    ports:
+      - "8000:8000"
